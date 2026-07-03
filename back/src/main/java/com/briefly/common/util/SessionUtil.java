@@ -1,6 +1,6 @@
 package com.briefly.common.util;
 
-import com.briefly.auth.User;
+import com.briefly.auth.entity.User;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 

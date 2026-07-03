@@ -9,13 +9,13 @@ Briefly_portfolio/
 ├── front/     # React + Vite (선택 UI)
 ├── back/      # Servlet + JSP (MVP 메인)
 │   └── src/main/java/com/briefly/
-│       ├── auth/          # 인증
-│       ├── fund/          # 투자상품
-│       ├── watchlist/     # 관심상품
-│       ├── application/   # 모의가입
-│       ├── report/        # 운용 브리프
-│       ├── alert/         # 위험 알림
-│       ├── admin/         # 관리자
+│       ├── auth/          # controller, service, dao, dto, entity
+│       ├── fund/
+│       ├── watchlist/
+│       ├── application/
+│       ├── report/
+│       ├── alert/
+│       ├── admin/
 │       └── common/        # filter, util
 │   └── dB/    # MySQL schema & seed
 └── docs/      # SRS · ERD · SDD

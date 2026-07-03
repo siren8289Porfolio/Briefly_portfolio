@@ -1,6 +1,6 @@
 package com.briefly.common.filter;
 
-import com.briefly.auth.User;
+import com.briefly.auth.entity.User;
 import com.briefly.common.util.SessionUtil;
 import com.briefly.common.util.WebUtil;
 import jakarta.servlet.Filter;

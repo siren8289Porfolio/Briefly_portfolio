@@ -71,68 +71,62 @@ JSP
 
 ---
 
-## 5. 패키지 구조 (도메인별)
+## 5. 패키지 구조 (도메인별 + 레이어별)
 
 ```
 src/main/java/com/briefly
- ├── auth/              # 인증 (F-001)
- │   ├── AuthServlet.java
- │   ├── AuthService.java
- │   ├── UserDao.java
- │   ├── UserDto.java
- │   └── User.java
+ ├── auth/
+ │   ├── controller/   AuthServlet.java
+ │   ├── service/      AuthService.java
+ │   ├── dao/          UserDao.java
+ │   ├── dto/          UserDto.java
+ │   └── entity/       User.java
  │
- ├── fund/              # 투자상품 (F-002)
- │   ├── FundServlet.java
- │   ├── FundService.java
- │   ├── FundDao.java
- │   ├── FundDto.java
- │   └── Fund.java
+ ├── fund/
+ │   ├── controller/   FundServlet.java
+ │   ├── service/      FundService.java
+ │   ├── dao/          FundDao.java
+ │   ├── dto/          FundDto.java
+ │   └── entity/       Fund.java
  │
- ├── watchlist/         # 관심상품 (F-003)
- │   ├── WatchlistServlet.java
- │   ├── WatchlistService.java
- │   ├── WatchlistDao.java
- │   ├── WatchlistDto.java
- │   └── Watchlist.java
+ ├── watchlist/
+ │   ├── controller/   WatchlistServlet.java
+ │   ├── service/      WatchlistService.java
+ │   ├── dao/          WatchlistDao.java
+ │   ├── dto/          WatchlistDto.java
+ │   └── entity/       Watchlist.java
  │
- ├── application/       # 모의가입 (F-003)
- │   ├── ApplicationServlet.java
- │   ├── ApplicationService.java
- │   ├── ApplicationDao.java
- │   ├── ApplicationDto.java
- │   └── FundApplication.java
+ ├── application/
+ │   ├── controller/   ApplicationServlet.java
+ │   ├── service/      ApplicationService.java
+ │   ├── dao/          ApplicationDao.java
+ │   ├── dto/          ApplicationDto.java
+ │   └── entity/       FundApplication.java
  │
- ├── report/            # 운용 브리프 (F-004)
- │   ├── ReportServlet.java
- │   ├── ReportService.java
- │   ├── ReportDao.java
- │   ├── ReportDto.java
- │   └── FundReport.java
+ ├── report/
+ │   ├── controller/   ReportServlet.java
+ │   ├── service/      ReportService.java
+ │   ├── dao/          ReportDao.java
+ │   ├── dto/          ReportDto.java
+ │   └── entity/       FundReport.java
  │
- ├── alert/             # 위험 알림 (F-004)
- │   ├── AlertServlet.java
- │   ├── AlertService.java
- │   ├── AlertDao.java
- │   ├── AlertDto.java
- │   └── RiskAlert.java
+ ├── alert/
+ │   ├── controller/   AlertServlet.java
+ │   ├── service/      AlertService.java
+ │   ├── dao/          AlertDao.java
+ │   ├── dto/          AlertDto.java
+ │   └── entity/       RiskAlert.java
  │
- ├── admin/             # 관리자 (F-005)
- │   └── AdminServlet.java
+ ├── admin/
+ │   └── controller/   AdminServlet.java
  │
  └── common/
-     ├── filter/
-     │   ├── LoginCheckFilter.java
-     │   └── AdminCheckFilter.java
-     └── util/
-         ├── DBConnectionUtil.java
-         ├── WebUtil.java
-         ├── SessionUtil.java
-         └── PasswordUtil.java
+     ├── filter/       LoginCheckFilter, AdminCheckFilter
+     └── util/         DBConnectionUtil, WebUtil, SessionUtil, PasswordUtil
 ```
 
-도메인 패키지 안에 Servlet → Service → Dao → Entity/Dto가 함께 위치한다.  
-`common`은 전 도메인 공통 인프라(필터, DB 연결, 웹 유틸)만 담는다.
+도메인 패키지 안에 `controller → service → dao → entity/dto` 레이어를 둔다.  
+`common`은 전 도메인 공통 인프라만 담는다.
 
 ---
 
