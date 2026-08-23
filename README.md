@@ -1,5 +1,23 @@
 # Briefly 
 
+## 0. 저장소 구조 (3뎁스 개요)
+
+전체 트리는 [`docs/STRUCTURE.md`](docs/STRUCTURE.md)를 본다.
+
+```text
+Briefly_portfolio/
+├── docs/          # SRS · SDD · ERD · DE/DA/DL/AI/QA 요약
+├── back/          # Servlet/JSP 백엔드 (pom · dB · src/main)
+├── front/         # Vite/React (public · src)
+├── de/            # Data Engineering (docs · sql · src)
+├── da/            # Data Analytics (docs · sql · src)
+├── dl/            # ML/DL NLP (docs · sql · briefly_dl · tests)
+├── ai/            # Assistive AI MVP OFF (docs · sql · briefly_ai · tests)
+└── qa/            # QA/QC (docs · checklists · evidence · src)
+```
+
+---
+
 ## 1. 핵심 한 줄
 
 > **Briefly는 Servlet/JDBC 기반 백엔드에서 Service/Servlet의 책임을 분리하고, 자주 조회하는 DB 조건에 인덱스를 추가해 테스트 가능성·장애 추적성·조회 효율을 개선한 프로젝트입니다.**
