@@ -60,13 +60,13 @@ Briefly_portfolio/
 │   │   └── 01_experiment_registry.sql
 │   ├── briefly_dl/                    # data · preprocess · models · eval · serve · train · versioning
 │   └── tests/
-├── ai/                                # Assistive AI (MVP OFF)
+├── ai/                                # Assistive AI (FastAPI explain ON)
 │   ├── README.md
 │   ├── pyproject.toml
 │   ├── docs/                          # SCOPE · REQUIREMENTS · DATA · SYSTEM · EVAL · MONITORING
 │   ├── sql/
 │   │   └── 01_ai_audit.sql
-│   ├── briefly_ai/                    # policy · safety · hitl · adapter · audit
+│   ├── briefly_ai/                    # policy · safety · hitl · adapter · audit · api
 │   └── tests/
 └── qa/                                # QA/QC
     ├── README.md
@@ -88,6 +88,6 @@ Briefly_portfolio/
 | `de/` | External financial data pipeline |
 | `da/` | KPI / events / star schema |
 | `dl/` | NLP baselines & DL contracts |
-| `ai/` | Future assistive AI (flags OFF) |
+| `ai/` | FastAPI assistive explain + future LLM contracts |
 | `qa/` | BR-TC, release gate, oracles |
 | `docs/` | SRS/SDD + module summaries |

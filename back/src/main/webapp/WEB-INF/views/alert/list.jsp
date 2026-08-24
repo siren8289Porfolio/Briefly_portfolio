@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.briefly.alert.AlertDto" %>
+<%@ page import="com.briefly.alert.dto.AlertDto" %>
+<%@ page import="com.briefly.ai.dto.AiExplanationDto" %>
 <%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -9,6 +10,18 @@
 </head>
 <body>
 <h1>위험 알림</h1>
+<%
+    AiExplanationDto aiExplanation = (AiExplanationDto) request.getAttribute("aiExplanation");
+    if (aiExplanation != null) {
+%>
+<section>
+    <h2>최신 알림 쉬운 설명 (보조)</h2>
+    <p><%= aiExplanation.getExplanation() %></p>
+    <p><small><%= aiExplanation.getDisclaimer() %></small></p>
+</section>
+<%
+    }
+%>
 <ul>
 <%
     List<AlertDto> alerts = (List<AlertDto>) request.getAttribute("alerts");

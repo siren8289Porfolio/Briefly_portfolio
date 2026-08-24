@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.briefly.report.ReportDto" %>
+<%@ page import="com.briefly.report.dto.ReportDto" %>
+<%@ page import="com.briefly.ai.dto.AiExplanationDto" %>
 <%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -9,6 +10,18 @@
 </head>
 <body>
 <h1>운용 브리프 (상품 #${fundId})</h1>
+<%
+    AiExplanationDto aiExplanation = (AiExplanationDto) request.getAttribute("aiExplanation");
+    if (aiExplanation != null) {
+%>
+<section>
+    <h2>최신 브리프 쉬운 요약 (보조)</h2>
+    <p><%= aiExplanation.getExplanation() %></p>
+    <p><small><%= aiExplanation.getDisclaimer() %></small></p>
+</section>
+<%
+    }
+%>
 <ul>
 <%
     List<ReportDto> reports = (List<ReportDto>) request.getAttribute("reports");

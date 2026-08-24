@@ -420,3 +420,33 @@ PENDING → CANCELED
 ---
 
 관련 문서: [SRS v0.1](./SRS.md) · [ERD / DB Schema](./ERD_DB_SCHEMA.md)
+
+---
+
+# v1 추가 — FastAPI 설계 보강
+
+기존 Servlet → Service → DAO → DB 구조, JSP 화면, 세션 인증은 유지한다.
+FastAPI는 별도 보조 서비스로 연결한다.
+
+```
+Browser
+  ↓
+Servlet Controller
+  ↓
+Service / AiAssistService
+  ├─ 기존 DAO / Database 처리
+  └─ AiClient
+       ↓ HTTP
+FastAPI AI Service
+  ├─ /v1/explain/fund
+  ├─ /v1/explain/brief
+  └─ /v1/explain/risk
+```
+
+| 항목 | 설계 |
+| --- | --- |
+| 원장 데이터 | 기존 DB만 관리. FastAPI는 DB 미수정 |
+| 모듈 | `com.briefly.ai` (AiClient, AiAssistService) |
+| 장애 | AI 실패 시 원본 상품/브리프/알림만 JSP 표시 |
+| 출력 성격 | 정보 이해 보조. 투자 의사결정·자동 위험 확정 아님 |
+

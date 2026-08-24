@@ -9,6 +9,8 @@
 | AI-R3 | 개인 투자 성향 데이터 학습 시 명시적 동의 |
 | AI-R4 | Latency / cost budget 정의 |
 | AI-R5 | Safety: 투자 권유·확정 표현 차단, groundedness |
+| AI-R6 | FastAPI assistive explain은 원문을 대체하지 않고 보조 설명만 제공 |
+| AI-R7 | FastAPI 장애 시 Servlet 핵심 조회는 정상 동작 |
 
 ## Non-Functional Budgets (proposed)
 
@@ -21,9 +23,10 @@
 
 ## Feature Flags
 
+- `ai.assistive_explain.enabled` — template FastAPI (default **true**)
 - `ai.brief_draft.enabled`
 - `ai.risk_candidate.enabled`
 - `ai.nl_search.enabled`
 - `ai.recommendation.enabled`
 
-Default: **all false** in MVP.
+Default: generative flags **false**; assistive explain **true** in v1.

@@ -30,3 +30,16 @@ flowchart LR
 - `RecommendationAdapter` — explanation-only
 
 Not wired into Servlet MVP.
+
+
+## FastAPI Assistive Explain (v1)
+
+Implemented endpoints (template-based, safety-filtered):
+
+- `GET /health`
+- `POST /v1/explain/fund`
+- `POST /v1/explain/brief`
+- `POST /v1/explain/risk`
+
+Wired from Servlet via `AiClient`. Does not replace Non-AI path for core CRUD/read.
+LLM BriefDraft / RiskCandidate adapters remain stubs behind OFF flags.

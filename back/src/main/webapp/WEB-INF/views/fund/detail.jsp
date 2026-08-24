@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.briefly.fund.FundDto" %>
+<%@ page import="com.briefly.fund.dto.FundDto" %>
+<%@ page import="com.briefly.ai.dto.AiExplanationDto" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -10,6 +11,7 @@
 <%
     FundDto fund = (FundDto) request.getAttribute("fund");
     Boolean watched = (Boolean) request.getAttribute("watched");
+    AiExplanationDto aiExplanation = (AiExplanationDto) request.getAttribute("aiExplanation");
 %>
 <h1><%= fund.getName() %></h1>
 <% if (request.getAttribute("error") != null) { %>
@@ -17,6 +19,14 @@
 <% } %>
 <p><%= fund.getDescription() %></p>
 <p>위험등급: <%= fund.getRiskGrade() %> | 예상 수익률: <%= fund.getExpectedReturn() %>%</p>
+
+<% if (aiExplanation != null) { %>
+<section>
+    <h2>쉬운 설명 (보조)</h2>
+    <p><%= aiExplanation.getExplanation() %></p>
+    <p><small><%= aiExplanation.getDisclaimer() %></small></p>
+</section>
+<% } %>
 
 <% if (session.getAttribute("loginUser") != null) { %>
 <form method="post" action="${pageContext.request.contextPath}/watchlist/toggle">
