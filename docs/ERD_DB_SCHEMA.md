@@ -9,8 +9,8 @@
 | 기준 SDD | [SDD v0.1](./SDD.md) |
 | DBMS | MySQL 8+ / MariaDB 10.6+ |
 | 문자셋 | utf8mb4 / utf8mb4_unicode_ci |
-| 스키마 파일 | `back/dB/schema.sql` |
-| 시드 파일 | `back/dB/seed.sql` |
+| 스키마 파일 | `db/schema.sql` |
+| 시드 파일 | `db/seed.sql` |
 
 ---
 
@@ -260,7 +260,7 @@ ORDER BY report_date DESC;
 
 ## 7. 초기 데이터
 
-`back/dB/seed.sql` 기준:
+`db/seed.sql` 기준:
 
 | 계정 | 비밀번호 | role |
 | --- | --- | --- |

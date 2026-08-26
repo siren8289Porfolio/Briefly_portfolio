@@ -490,7 +490,7 @@ push → CI(build + test) → image build → registry push → K8s/서버 deplo
 - 배포 실패 시 어느 버전까지 적용됐는지 추적
 - 수동 SQL 실행 실수 방지
 
-Briefly 현재: `back/dB/schema.sql` + `seed.sql` → Flyway 도입 시 `db/migration/V1__...`로 전환
+Briefly 현재: `db/schema.sql` + `db/seed.sql` → Flyway 도입 시 `db/migration/V1__...`로 전환
 
 ---
 
@@ -597,7 +597,7 @@ spring:
 | Entity | `com.briefly.model.*` | `@Entity` |
 | DTO | `com.briefly.dto.*` | record / class |
 | Config | `db.properties` | `application.yml` + profile |
-| Migration | `dB/schema.sql` | Flyway |
+| Migration | `db/schema.sql` | Flyway |
 | Test | JUnit + Mockito | `@SpringBootTest` |
 | Deploy | Tomcat WAR | Docker + K8s |
 

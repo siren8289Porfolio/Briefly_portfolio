@@ -157,7 +157,7 @@ src/main/java/com/briefly
 | fund_reports | 운용 브리프 | report_id, fund_id, title, report_month, summary |
 | risk_alerts | 위험 알림 | alert_id, fund_id, previous_risk_level, current_risk_level, message |
 
-> 실제 DDL·컬럼명은 [ERD / DB Schema](./ERD_DB_SCHEMA.md) 및 `back/dB/schema.sql`을 기준으로 한다.
+> 실제 DDL·컬럼명은 [ERD / DB Schema](./ERD_DB_SCHEMA.md) 및 `db/schema.sql`을 기준으로 한다.
 
 ### 7.2 주요 관계
 

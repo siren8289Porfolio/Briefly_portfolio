@@ -1,7 +1,7 @@
 # Briefly Data Efficiency Guide
 
 데이터·DB·파이프라인 효율화를 정리한 학습/실무 참고 문서입니다.  
-Briefly MVP 스키마(`back/dB/schema.sql`)를 기준으로 적용 예시를 포함합니다.
+Briefly MVP 스키마(`db/schema.sql`)를 기준으로 적용 예시를 포함합니다.
 
 관련 문서: [ERD/DB Schema](./ERD_DB_SCHEMA.md) · [Engineering Guide](./ENGINEERING_GUIDE.md)
 

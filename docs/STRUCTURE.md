@@ -14,17 +14,19 @@ Briefly_portfolio/
 │   ├── DATA_EFFICIENCY_GUIDE.md
 │   ├── DE.md
 │   ├── DA.md
+│   ├── DB.md
 │   ├── DL.md
 │   ├── AI.md
 │   ├── QA.md
 │   └── STRUCTURE.md
 ├── back/                              # Servlet/JSP 백엔드 (MVP)
 │   ├── pom.xml
-│   ├── dB/
-│   │   ├── schema.sql
-│   │   └── seed.sql
 │   └── src/
 │       └── main/                      # java · resources · webapp
+├── db/                                # OLTP schema · seed
+│   ├── README.md
+│   ├── schema.sql
+│   └── seed.sql
 ├── front/                             # Vite/React 프론트
 │   ├── package.json
 │   ├── vite.config.js
@@ -84,6 +86,7 @@ Briefly_portfolio/
 | Path | Role |
 | --- | --- |
 | `back/` | Servlet/JSP MVP |
+| `db/` | OLTP schema · seed |
 | `front/` | React (Vite) |
 | `de/` | External financial data pipeline |
 | `da/` | KPI / events / star schema |

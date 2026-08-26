@@ -6,8 +6,9 @@
 
 ```text
 Briefly_portfolio/
-├── docs/          # SRS · SDD · ERD · DE/DA/DL/AI/QA 요약
-├── back/          # Servlet/JSP 백엔드 (pom · dB · src/main)
+├── docs/          # SRS · SDD · ERD · DE/DA/DB/DL/AI/QA 요약
+├── back/          # Servlet/JSP 백엔드 (pom · src/main)
+├── db/            # OLTP schema · seed
 ├── front/         # Vite/React (public · src)
 ├── de/            # Data Engineering (docs · sql · src)
 ├── da/            # Data Analytics (docs · sql · src)
